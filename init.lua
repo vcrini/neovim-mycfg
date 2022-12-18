@@ -1,3 +1,4 @@
+-- tutorial here: https://www.youtube.com/watch?v=vdn_pKJUda8
 require("vcrini.plugins-setup")
 require("vcrini.core.options")
 require("vcrini.core.keymaps")
@@ -7,3 +8,6 @@ require("vcrini.plugins.nvim-tree")
 require("vcrini.plugins.lualine")
 require("vcrini.plugins.telescope")
 require("vcrini.plugins.nvim-cmp")
+require("vcrini.plugins.lsp.mason")
+require("vcrini.plugins.lsp.lspsaga")
+require("vcrini.plugins.lsp.lspconfig")
