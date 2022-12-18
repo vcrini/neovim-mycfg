@@ -32,8 +32,8 @@ return packer.startup(function(use)
   use("szw/vim-maximizer")
   -- essential plugins
   use("tpope/vim-surround")
-  --use("vim-scripts/ReplaceWithRegister")
-  --commenting with gc
+  -- use("vim-scripts/ReplaceWithRegister")
+  -- commenting with gc
   use("numToStr/Comment.nvim")
 
   -- file explorer
