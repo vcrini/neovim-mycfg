@@ -18,15 +18,18 @@ mason.setup()
 
 mason_lspconfig.setup({
 	ensure_installed = {
-		"tsserver",
-		"html",
-		"cssls",
-		"tailwindcss",
-		"sumneko_lua",
-		"emmet_ls",
 		"bashls",
-		"yamlls",
+		"cssls",
 		"dockerls",
+		"emmet_ls",
+		"html",
+		"gopls",
+		"jsonls",
+		"sumneko_lua",
+		"tailwindcss",
+		"terraformls",
+		"tsserver",
+		"yamlls",
 	},
 })
 
