@@ -25,6 +25,7 @@ mason_lspconfig.setup({
 		"html",
 		"gopls",
 		"jsonls",
+		"pylsp",
 		"sumneko_lua",
 		"tailwindcss",
 		"terraformls",
@@ -39,7 +40,6 @@ mason_null_ls.setup({
 		"prettier", -- ts/js formatter
 		"stylua", -- lua formatter
 		"eslint_d", -- ts/js linter
-		"flake8", -- for python
 	},
 	-- auto-install configured formatters & linters (with null-ls)
 	automatic_installation = true,
