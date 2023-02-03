@@ -112,6 +112,18 @@ lspconfig["dockerls"].setup({
 	on_attach = on_attach,
 })
 -- configure go server
+lspconfig["golangci_lint_ls"].setup({
+	capabilities = capabilities,
+	on_attach = on_attach,
+	settings = {
+		golangci_lint_ls = {
+			init_options = {
+				command = { "golangci-lint", "run", "--enable-all", "--out-format", "json" },
+			},
+		},
+	},
+})
+-- configure go server
 lspconfig["gopls"].setup({
 	capabilities = capabilities,
 	on_attach = on_attach,
