@@ -128,6 +128,11 @@ lspconfig["gopls"].setup({
 	capabilities = capabilities,
 	on_attach = on_attach,
 })
+-- configure markdown server
+lspconfig["marksman"].setup({
+	capabilities = capabilities,
+	on_attach = on_attach,
+})
 -- configure jsonls server
 lspconfig["jsonls"].setup({
 	capabilities = capabilities,

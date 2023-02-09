@@ -26,6 +26,7 @@ mason_lspconfig.setup({
 		"gopls",
 		"golangci_lint_ls",
 		"jsonls",
+		"marksman",
 		"pylsp",
 		"sumneko_lua",
 		"tailwindcss",
