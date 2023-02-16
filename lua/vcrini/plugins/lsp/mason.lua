@@ -28,7 +28,7 @@ mason_lspconfig.setup({
 		"jsonls",
 		"marksman",
 		"pylsp",
-		"sumneko_lua",
+		"lua_ls",
 		"tailwindcss",
 		"terraformls",
 		"tsserver",
