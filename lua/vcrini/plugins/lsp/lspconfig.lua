@@ -51,6 +51,11 @@ for type, icon in pairs(signs) do
 	vim.fn.sign_define(hl, { text = icon, texthl = hl, numhl = "" })
 end
 
+-- configure ansible server
+lspconfig["ansiblels"].setup({
+	capabilities = capabilities,
+	on_attach = on_attach,
+})
 -- configure html server
 lspconfig["html"].setup({
 	capabilities = capabilities,

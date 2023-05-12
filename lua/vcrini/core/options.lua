@@ -36,3 +36,6 @@ opt.splitright = true
 opt.splitbelow = true
 
 opt.iskeyword:append("-")
+
+-- to start ansible highlight "extesion must be yaml.ansible
+opt.ft = "yaml.ansible"

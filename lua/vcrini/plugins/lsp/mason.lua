@@ -18,6 +18,7 @@ mason.setup()
 
 mason_lspconfig.setup({
 	ensure_installed = {
+		"ansiblels",
 		"bashls",
 		"cssls",
 		"dockerls",
@@ -39,6 +40,7 @@ mason_lspconfig.setup({
 mason_null_ls.setup({
 	-- list of formatters & linters for mason to install
 	ensure_installed = {
+		"ansible-lint",
 		"prettier", -- ts/js formatter
 		"stylua", -- lua formatter
 		"eslint_d", -- ts/js linter
