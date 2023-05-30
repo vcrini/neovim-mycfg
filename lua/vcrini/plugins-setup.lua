@@ -88,6 +88,8 @@ return packer.startup(function(use)
 	use("lewis6991/gitsigns.nvim") -- show line modifications on left hand side
 	-- pretty list to show diagnostics
 	use("folke/trouble.nvim")
+	-- scala support
+	use("scalameta/nvim-metals")
 
 	if packer_bootstrap then
 		require("packer").sync()
