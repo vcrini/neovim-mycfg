@@ -31,6 +31,7 @@ return {
         "bashls",
         "cssls",
         "emmet_ls",
+        "golangci_lint_ls",
         "graphql",
         "html",
         "lua_ls",
@@ -48,10 +49,13 @@ return {
     mason_null_ls.setup({
       -- list of formatters & linters for mason to install
       ensure_installed = {
+        "eslint_d", -- ts/js linter
+        "golangci_lint",
+        "gofmt",
+        "gomodifytags",
         "packer",
         "prettier", -- ts/js formatter
         "stylua", -- lua formatter
-        "eslint_d", -- ts/js linter
       },
       -- auto-install configured servers (with lspconfig)
       automatic_installation = true,

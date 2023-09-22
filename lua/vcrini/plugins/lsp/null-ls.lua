@@ -32,6 +32,10 @@ return {
         formatting.terraform_fmt,
         -- terragrunt formatter
         formatting.packer,
+        -- go
+        diagnostics.golangci_lint,
+        code_actions.gomodifytags,
+        formatting.gofmt,
         -- bash
         formatting.shfmt,
         diagnostics.shellcheck,
