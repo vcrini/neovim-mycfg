@@ -27,6 +27,12 @@ return {
         formatting.prettier.with({
           extra_filetypes = { "svelte" },
         }), -- js/ts formatter
+        -- terraform
+        diagnostics.terraform_validate,
+        formatting.terraform_fmt,
+        -- terragrunt formatter
+        formatting.packer,
+        -- bash
         formatting.shfmt,
         diagnostics.shellcheck,
         hover.printenv,
