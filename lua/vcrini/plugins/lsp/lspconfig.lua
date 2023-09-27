@@ -74,49 +74,34 @@ return {
       vim.fn.sign_define(hl, { text = icon, texthl = hl, numhl = "" })
     end
 
-    -- configure html server
-    lspconfig["html"].setup({
+    -- configure bash server
+    lspconfig["ansiblels"].setup({
+      capabilities = capabilities,
+      on_attach = on_attach,
+      filetypes = { "yml.ansible" },
+    })
+    --
+    -- configure bash server
+    lspconfig["bashls"].setup({
       capabilities = capabilities,
       on_attach = on_attach,
     })
-
-    -- configure typescript server with plugin
-    lspconfig["tsserver"].setup({
-      capabilities = capabilities,
-      on_attach = on_attach,
-    })
-
+    --
     -- configure css server
     lspconfig["cssls"].setup({
       capabilities = capabilities,
       on_attach = on_attach,
     })
 
-    -- configure tailwindcss server
-    lspconfig["tailwindcss"].setup({
+    -- configure emmet language server
+    lspconfig["emmet_ls"].setup({
       capabilities = capabilities,
       on_attach = on_attach,
+      filetypes = { "html", "typescriptreact", "javascriptreact", "css", "sass", "scss", "less", "svelte" },
     })
-
-    -- configure svelte server
-    lspconfig["svelte"].setup({
-      capabilities = capabilities,
-      on_attach = function(client, bufnr)
-        on_attach(client, bufnr)
-
-        vim.api.nvim_create_autocmd("BufWritePost", {
-          pattern = { "*.js", "*.ts" },
-          callback = function(ctx)
-            if client.name == "svelte" then
-              client.notify("$/onDidChangeTsOrJsFile", { uri = ctx.file })
-            end
-          end,
-        })
-      end,
-    })
-
-    -- configure prisma orm server
-    lspconfig["prismals"].setup({
+    --
+    -- configure go server
+    lspconfig["golangci_lint_ls"].setup({
       capabilities = capabilities,
       on_attach = on_attach,
     })
@@ -127,42 +112,10 @@ return {
       on_attach = on_attach,
       filetypes = { "graphql", "gql", "svelte", "typescriptreact", "javascriptreact" },
     })
-
-    -- configure emmet language server
-    lspconfig["emmet_ls"].setup({
+    -- configure html server
+    lspconfig["html"].setup({
       capabilities = capabilities,
       on_attach = on_attach,
-      filetypes = { "html", "typescriptreact", "javascriptreact", "css", "sass", "scss", "less", "svelte" },
-    })
-
-    -- configure python server
-    lspconfig["pyright"].setup({
-      capabilities = capabilities,
-      on_attach = on_attach,
-    })
-
-    -- configure bash server
-    lspconfig["bashls"].setup({
-      capabilities = capabilities,
-      on_attach = on_attach,
-    })
-    -- configure go server
-    lspconfig["golangci_lint_ls"].setup({
-      capabilities = capabilities,
-      on_attach = on_attach,
-      --  settings = {
-      --    golangci_lint_ls = {
-      --      init_options = {
-      --        command = { "golangci-lint", "run", "--enable-all", "out-format", "json" },
-      --      },
-      --    },
-      --  },
-    })
-    -- configure terraform server
-    lspconfig["terraformls"].setup({
-      capabilities = capabilities,
-      on_attach = on_attach,
-      filetypes = { "hcl", "terraform" },
     })
     -- configure lua server (with special settings)
     lspconfig["lua_ls"].setup({
@@ -183,6 +136,49 @@ return {
           },
         },
       },
+    })
+    -- configure prisma orm server
+    lspconfig["prismals"].setup({
+      capabilities = capabilities,
+      on_attach = on_attach,
+    })
+    -- configure python server
+    lspconfig["pyright"].setup({
+      capabilities = capabilities,
+      on_attach = on_attach,
+    })
+
+    -- configure svelte server
+    lspconfig["svelte"].setup({
+      capabilities = capabilities,
+      on_attach = function(client, bufnr)
+        on_attach(client, bufnr)
+
+        vim.api.nvim_create_autocmd("BufWritePost", {
+          pattern = { "*.js", "*.ts" },
+          callback = function(ctx)
+            if client.name == "svelte" then
+              client.notify("$/onDidChangeTsOrJsFile", { uri = ctx.file })
+            end
+          end,
+        })
+      end,
+    })
+    -- configure tailwindcss server
+    lspconfig["tailwindcss"].setup({
+      capabilities = capabilities,
+      on_attach = on_attach,
+    })
+    -- configure terraform server
+    lspconfig["terraformls"].setup({
+      capabilities = capabilities,
+      on_attach = on_attach,
+      filetypes = { "hcl", "terraform" },
+    })
+    -- configure typescript server with plugin
+    lspconfig["tsserver"].setup({
+      capabilities = capabilities,
+      on_attach = on_attach,
     })
   end,
 }
