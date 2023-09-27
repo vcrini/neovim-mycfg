@@ -28,6 +28,7 @@ return {
     mason_lspconfig.setup({
       -- list of servers for mason to install
       ensure_installed = {
+        "ansiblels",
         "bashls",
         "cssls",
         "emmet_ls",
@@ -49,6 +50,7 @@ return {
     mason_null_ls.setup({
       -- list of formatters & linters for mason to install
       ensure_installed = {
+        "ansible_lint",
         "eslint_d", -- ts/js linter
         "golangci_lint",
         "gofmt",

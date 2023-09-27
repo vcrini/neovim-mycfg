@@ -10,7 +10,6 @@ return {
     -- for conciseness
     local formatting = null_ls.builtins.formatting -- to setup formatters
     local diagnostics = null_ls.builtins.diagnostics -- to setup linters
-    local hover = null_ls.builtins.hover
     local code_actions = null_ls.builtins.code_actions
 
     -- to setup format on save
@@ -36,10 +35,11 @@ return {
         diagnostics.golangci_lint,
         code_actions.gomodifytags,
         formatting.gofmt,
+        -- ansible
+        diagnostics.ansiblelint,
         -- bash
         formatting.shfmt,
         diagnostics.shellcheck,
-        hover.printenv,
         code_actions.shellcheck,
         formatting.stylua, -- lua formatter
         diagnostics.eslint_d.with({ -- js/ts linter
