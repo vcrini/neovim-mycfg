@@ -78,7 +78,6 @@ return {
     lspconfig["ansiblels"].setup({
       capabilities = capabilities,
       on_attach = on_attach,
-      filetypes = { "yml.ansible" },
     })
     --
     -- configure bash server
