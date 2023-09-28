@@ -25,6 +25,7 @@ return {
         --  "formatting.prettier.with({disabled_filetypes: {}})" (see null-ls docs)
         formatting.prettier.with({
           extra_filetypes = { "svelte" },
+          disabled_filetypes = { "yaml" },
         }), -- js/ts formatter
         -- terraform
         diagnostics.terraform_validate,
@@ -36,7 +37,9 @@ return {
         code_actions.gomodifytags,
         formatting.gofmt,
         -- ansible
-        diagnostics.ansiblelint,
+        diagnostics.ansiblelint.with({
+          args = { "-f", "codeclimate", "-q", "--nocolor", "$FILENAME", "-x", "yaml[indentation]" },
+        }),
         -- bash
         formatting.shfmt,
         diagnostics.shellcheck,
