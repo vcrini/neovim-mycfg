@@ -57,10 +57,6 @@ return {
 
       opts.desc = "Restart LSP"
       keymap.set("n", "<leader>rs", ":LspRestart<CR>", opts) -- mapping to restart lsp if necessary
-      opts.desc = "format code"
-      keymap.set("n", "<leader>pt", function()
-        vim.lsp.buf.format({ async = true })
-      end, opts)
     end
 
     -- used to enable autocompletion (assign to every lsp server config)
