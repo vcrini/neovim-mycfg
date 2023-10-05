@@ -6,7 +6,7 @@ return {
     conform.setup({
       formatters_by_ft = {
         css = { "prettier" },
-        bash = { "beautysh" },
+        sh = { "beautysh" },
         go = { "gofmt" },
         graphql = { "prettier" },
         html = { "prettier" },
