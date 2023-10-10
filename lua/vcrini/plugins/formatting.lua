@@ -29,7 +29,7 @@ return {
         timeout_ms = 1000,
       },
     })
-
+    require("conform.formatters.beautysh").args = { "-i", "2", "-" }
     vim.keymap.set({ "n", "v" }, "<leader>pt", function()
       conform.format({
         lsp_fallback = true,
