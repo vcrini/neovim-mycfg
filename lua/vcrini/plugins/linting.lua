@@ -11,6 +11,7 @@ return {
       ansible = { "ansible_lint" },
       sh = { "shellcheck" },
       go = { "golangcilint" },
+      json = { "jsonlint" },
       javascript = { "eslint_d" },
       javascriptreact = { "eslint_d" },
       python = { "pylint" },

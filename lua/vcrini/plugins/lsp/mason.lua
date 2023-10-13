@@ -33,6 +33,7 @@ return {
         "golangci_lint_ls",
         "graphql",
         "html",
+        "jsonls",
         "lua_ls",
         "prismals",
         "pyright",
