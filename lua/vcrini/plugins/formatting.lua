@@ -5,8 +5,9 @@ return {
     local conform = require("conform")
     conform.setup({
       formatters_by_ft = {
+        -- yaml = { "prettier" },
+        --terragrunt = { "packer" },
         css = { "prettier" },
-        sh = { "beautysh" },
         go = { "gofmt" },
         graphql = { "prettier" },
         html = { "prettier" },
@@ -16,12 +17,11 @@ return {
         lua = { "stylua" },
         markdown = { "prettier" },
         python = { "isort", "black" },
+        sh = { "beautysh" },
         svelte = { "prettier" },
         terraform = { "terraform_fmt" },
-        --terragrunt = { "packer" },
         typescript = { "prettier" },
         typescriptreact = { "prettier" },
-        -- yaml = { "prettier" },
       },
       format_on_save = {
         lsp_fallback = true,

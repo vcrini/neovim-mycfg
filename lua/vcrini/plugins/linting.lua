@@ -9,12 +9,12 @@ return {
 
     lint.linters_by_ft = {
       ansible = { "ansible_lint" },
-      sh = { "shellcheck" },
       go = { "golangcilint" },
-      json = { "jsonlint" },
       javascript = { "eslint_d" },
       javascriptreact = { "eslint_d" },
+      json = { "jsonlint" },
       python = { "pylint" },
+      sh = { "shellcheck" },
       svelte = { "eslint_d" },
       typescript = { "eslint_d" },
       typescriptreact = { "eslint_d" },
