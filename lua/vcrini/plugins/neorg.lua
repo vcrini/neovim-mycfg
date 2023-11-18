@@ -28,7 +28,8 @@ return {
           config = {
             workspaces = {
               notes = "~/Documents/bernini/support/notes",
-              gdr = "~/Documents/gdr",
+              gdr = "~/Documents/life/gdr",
+              wiki = "~/Documents/life/wiki",
             },
           },
         },
