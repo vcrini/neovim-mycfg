@@ -31,6 +31,7 @@ return {
               gdr = "~/Documents/life/gdr",
               wiki = "~/Documents/life/wiki",
             },
+            default_workspace = "notes",
           },
         },
       },
