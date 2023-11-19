@@ -42,3 +42,4 @@ end
 return M
 --lua print(vim.inspect(require('gdr').d(3,6,3)))
 --lua print(require('gdr').d(10,6,0)[1])
+--lua print(vim.inspect(require('gdr').nd(10,1,20,0)))
