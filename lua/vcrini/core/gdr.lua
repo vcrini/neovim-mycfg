@@ -1,5 +1,8 @@
 --lua print(vim.inspect(require('vcrini.core.gdr').d(3,6,3)))
 --lua print(require('vcrini.core.gdr').d(10,6,0)[1])
+-- command! -nargs=* TendSix lua print(require('vcrini.core.gdr').d(<f-args>)[1])
+-- command! -nargs=* D lua print(vim.inspect(require('vcrini.core.gdr').d(<f-args>)))
+-- command! -nargs=* Nd lua print(vim.inspect(require('vcrini.core.gdr').nd(<f-args>)))
 local api = vim.api
 math.randomseed(os.time())
 local M = {}
@@ -14,15 +17,21 @@ function M.sum(a)
   end
   return sum
 end
-function M.nd(m, n, side, plus)
+function M.nd(m, side, n, plus)
   local r = {}
   for _ = 1, m do
     table.insert(r, M.d(n, side, plus)[1])
   end
   return r
 end
-function M.d(n, side, plus)
+function M.d(side, n, plus)
   local r = {}
+  plus = plus or 0
+  n = n or 1
+  side = side or 6
+  -- print("side " .. side)
+  -- print("n " .. n)
+  -- print("plus " .. plus)
   for _ = 1, n do
     -- num = num + math.random(1, side)
     table.insert(r, math.random(1, side))
