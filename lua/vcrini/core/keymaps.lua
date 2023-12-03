@@ -16,3 +16,10 @@ keymap.set("n", "<leader>nh", ":nohl<CR>", { desc = "Clear search highlights" })
 
 -- delete single character without copying into register
 -- keymap.set("n", "x", '"_x')
+local api = vim.api
+
+api.nvim_create_user_command("Test", "lua print(require('vcrini.core.gdr').d(10,6,0)[1])", {})
+--api.nvim_create_user_command("Nd", "print(vim.inspect(require('vcrini.core.gdr').nd(fargs))", { nargs = "*" })
+api.nvim_create_user_command("Nd", function(opts)
+  print(vim.inspect(require("vcrini.core.gdr").nd(opts.fargs[1], opts.fargs[2], opts.fargs[3], opts.fargs[4])))
+end, { nargs = "*" })

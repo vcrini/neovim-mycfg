@@ -20,7 +20,7 @@ end
 function M.nd(m, side, n, plus)
   local r = {}
   for _ = 1, m do
-    table.insert(r, M.d(n, side, plus)[1])
+    table.insert(r, M.d(side, n, plus)[1])
   end
   return r
 end
