@@ -23,3 +23,10 @@ api.nvim_create_user_command("Test", "lua print(require('vcrini.core.gdr').d(10,
 api.nvim_create_user_command("Nd", function(opts)
   print(vim.inspect(require("vcrini.core.gdr").nd(opts.fargs[1], opts.fargs[2], opts.fargs[3], opts.fargs[4])))
 end, { nargs = "*" })
+api.nvim_create_user_command("Ni", function(opts)
+  print(
+    vim.inspect(
+      require("vcrini.core.gdr").init(opts.fargs[1], opts.fargs[2], opts.fargs[3], opts.fargs[4], opts.fargs[5])
+    )
+  )
+end, { nargs = "*" })

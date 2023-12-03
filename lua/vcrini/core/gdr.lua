@@ -17,6 +17,13 @@ function M.sum(a)
   end
   return sum
 end
+function M.init(name, m, side, n, plus)
+  local r = {}
+  for i = 1, m do
+    table.insert(r, name .. " " .. i .. " " .. M.d(side, n, plus)[1])
+  end
+  return r
+end
 function M.nd(m, side, n, plus)
   local r = {}
   for _ = 1, m do
