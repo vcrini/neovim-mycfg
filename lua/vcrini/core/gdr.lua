@@ -1,3 +1,5 @@
+--lua print(vim.inspect(require('vcrini.core.gdr').d(3,6,3)))
+--lua print(require('vcrini.core.gdr').d(10,6,0)[1])
 local api = vim.api
 math.randomseed(os.time())
 local M = {}
@@ -40,6 +42,3 @@ function M.example()
   return vim.inspect(a, b)
 end
 return M
---lua print(vim.inspect(require('gdr').d(3,6,3)))
---lua print(require('gdr').d(10,6,0)[1])
---lua print(vim.inspect(require('gdr').nd(10,1,20,0)))
