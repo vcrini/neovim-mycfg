@@ -20,7 +20,7 @@ end
 function M.init(name, m, side, n, plus)
   local r = {}
   for i = 1, m do
-    table.insert(r, i .. " " .. name .. " " .. M.d(side, n, plus)[1])
+    table.insert(r, M.d(side, n, plus)[1] .. " " .. name .. " " .. i .. " ")
   end
   return r
 end
