@@ -13,7 +13,7 @@ return {
       javascript = { "eslint_d" },
       javascriptreact = { "eslint_d" },
       json = { "jsonlint" },
-      python = { "pylint" },
+      python = { "flake8" },
       sh = { "shellcheck" },
       svelte = { "eslint_d" },
       typescript = { "eslint_d" },

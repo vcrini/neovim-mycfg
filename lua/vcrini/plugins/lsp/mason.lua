@@ -56,7 +56,7 @@ return {
         "golangci-lint",
         "isort",
         "prettier", -- ts/js formatter
-        "pylint",
+        "flake8",
         "shellcheck",
         "stylua", -- lua formatter
         --"terraform_fmt",
