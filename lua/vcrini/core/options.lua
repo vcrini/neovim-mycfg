@@ -46,3 +46,6 @@ opt.undodir = os.getenv("HOME") .. "/.vim/undodir"
 opt.undofile = true
 
 opt.scrolloff = 8
+-- setting python version for venv
+-- vim.g.python3_host_prog = os.getenv("HOME") .. "/.pyenv/versions/3.12.0/bin/python3.12"
+vim.g.python3_host_prog = os.getenv("HOME") .. "/venv/gitpython/bin/python"
