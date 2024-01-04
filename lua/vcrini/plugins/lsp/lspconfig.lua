@@ -96,7 +96,7 @@ return {
     })
     --
     -- configure go server
-    lspconfig["golangci_lint_ls"].setup({
+    lspconfig["gopls"].setup({
       capabilities = capabilities,
       on_attach = on_attach,
     })
