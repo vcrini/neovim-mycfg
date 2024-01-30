@@ -165,10 +165,10 @@ return {
       end,
     })
     -- configure tailwindcss server
-    lspconfig["tailwindcss"].setup({
-      capabilities = capabilities,
-      on_attach = on_attach,
-    })
+    -- lspconfig["tailwindcss"].setup({
+    --   capabilities = capabilities,
+    --   on_attach = on_attach,
+    -- })
     -- configure terraform server
     lspconfig["terraformls"].setup({
       capabilities = capabilities,

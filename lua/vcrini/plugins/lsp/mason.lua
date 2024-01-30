@@ -39,7 +39,7 @@ return {
         "prismals",
         "pyright",
         "svelte",
-        "tailwindcss",
+        -- "tailwindcss",
         "terraformls",
         "tsserver",
       },
