@@ -48,5 +48,8 @@ opt.undofile = true
 opt.scrolloff = 8
 -- setting python version for venv
 -- vim.g.python3_host_prog = os.getenv("HOME") .. "/.pyenv/versions/3.12.0/bin/python3.12"
-vim.g.python3_host_prog = os.getenv("HOME") .. "/venv/gitpython/bin/python"
+-- vim.g.python3_host_prog = os.getenv("HOME") .. "/venv/gitpython/bin/python"
+vim.g.python3_host_prog = "/usr/local/bin/python3.9"
+vim.opt.conceallevel = 1
+-- opt.wildmode = "longest,list"
 opt.wildmode = "longest,list,full"
