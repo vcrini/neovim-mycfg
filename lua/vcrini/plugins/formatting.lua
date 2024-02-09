@@ -5,7 +5,7 @@ return {
     local conform = require("conform")
     conform.setup({
       formatters_by_ft = {
-        -- yaml = { "prettier" },
+        yaml = { "prettier" },
         --terragrunt = { "packer" },
         css = { "prettier" },
         go = { "gofmt" },
@@ -16,7 +16,7 @@ return {
         json = { "prettier" },
         lua = { "stylua" },
         markdown = { "prettier" },
-        python = { "isort", "black" },
+        -- python = { "isort", "black" },
         sh = { "beautysh" },
         svelte = { "prettier" },
         terraform = { "terraform_fmt" },
