@@ -26,6 +26,7 @@ return {
 
     -- see below for full list of options 👇
     -- Optional, completion of wiki links, local markdown links, and tags using nvim-cmp.
+    new_notes_location = "current_dir",
     completion = {
       -- Set to false to disable completion.
       nvim_cmp = true,
@@ -36,14 +37,9 @@ return {
       -- Where to put new notes created from completion. Valid options are
       --  * "current_dir" - put new notes in same directory as the current buffer.
       --  * "notes_subdir" - put new notes in the default notes subdirectory.
-      new_notes_location = "current_dir",
 
       -- Control how wiki links are completed with these (mutually exclusive) options:
       --
-      -- 1. Whether to add the note ID during completion.
-      -- E.g. "[[Foo" completes to "[[foo|Foo]]" assuming "foo" is the ID of the note.
-      -- Mutually exclusive with 'prepend_note_path' and 'use_path_only'.
-      prepend_note_id = true,
       -- 2. Whether to add the note path during completion.
       -- E.g. "[[Foo" completes to "[[notes/foo|Foo]]" assuming "notes/foo.md" is the path of the note.
       -- Mutually exclusive with 'prepend_note_id' and 'use_path_only'.
@@ -117,14 +113,6 @@ return {
       time_format = "%H:%M",
       -- A map for custom variables, the key should be the variable and the value a function
       substitutions = {},
-    },
-
-    -- Optional, customize the backlinks interface.
-    backlinks = {
-      -- The default height of the backlinks pane.
-      height = 10,
-      -- Whether or not to wrap lines.
-      wrap = true,
     },
 
     -- Optional, by default when you use `:ObsidianFollowLink` on a link to an external
