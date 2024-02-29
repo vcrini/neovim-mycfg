@@ -15,7 +15,7 @@ return {
         javascriptreact = { "prettier" },
         json = { "prettier" },
         lua = { "stylua" },
-        markdown = { "prettier" },
+        -- markdown = { "prettier" },
         -- python = { "isort", "black" },
         sh = { "beautysh" },
         svelte = { "prettier" },
