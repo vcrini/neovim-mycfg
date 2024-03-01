@@ -40,7 +40,8 @@ return {
         "pyright",
         "svelte",
         -- "tailwindcss",
-        "terraformls",
+        -- "terraformls",
+        "tflint",
         "tsserver",
       },
       -- auto-install configured servers (with lspconfig)

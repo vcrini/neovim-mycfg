@@ -170,7 +170,7 @@ return {
     --   on_attach = on_attach,
     -- })
     -- configure terraform server
-    lspconfig["terraformls"].setup({
+    lspconfig["tflint"].setup({
       capabilities = capabilities,
       on_attach = on_attach,
       filetypes = { "hcl", "terraform" },
