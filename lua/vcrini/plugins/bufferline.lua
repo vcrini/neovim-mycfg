@@ -5,7 +5,7 @@ return {
   opts = {
     options = {
       buffer_close_icon = "x",
-      mode = "buffers",
+      mode = "tabs",
       separator_style = "slant",
     },
   },
