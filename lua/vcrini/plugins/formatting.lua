@@ -6,7 +6,7 @@ return {
     conform.setup({
       formatters_by_ft = {
         yaml = { "prettier" },
-        --terragrunt = { "packer" },
+        hcl = { "terragrunt_hclfmt" },
         css = { "prettier" },
         go = { "gofmt" },
         graphql = { "prettier" },
