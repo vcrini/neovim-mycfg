@@ -44,6 +44,7 @@ opt.swapfile = false
 opt.backup = false
 opt.undodir = os.getenv("HOME") .. "/.vim/undodir"
 opt.undofile = true
+opt.undolevels = 10001
 
 opt.scrolloff = 8
 -- setting python version for venv
