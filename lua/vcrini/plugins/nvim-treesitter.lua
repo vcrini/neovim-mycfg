@@ -6,6 +6,7 @@ return {
     dependencies = {
       "windwp/nvim-ts-autotag",
     },
+
     config = function()
       -- import nvim-treesitter plugin
       local treesitter = require("nvim-treesitter.configs")
@@ -51,6 +52,7 @@ return {
           "typescript",
           "vim",
           "yaml",
+          "xml",
         },
         -- auto install above language parsers
         auto_install = true,

@@ -39,6 +39,7 @@ return {
         "prismals",
         "pyright",
         "svelte",
+        "lemminx",
         -- "tailwindcss",
         -- "terraformls",
         "tflint",
