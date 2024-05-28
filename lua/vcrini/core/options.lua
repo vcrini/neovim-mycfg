@@ -54,3 +54,4 @@ vim.g.python3_host_prog = "/usr/local/bin/python3.9"
 -- vim.opt.conceallevel = 2
 -- opt.wildmode = "longest,list"
 opt.wildmode = "longest,list,full"
+vim.g.tmux_navigator_disable_when_zoomed = 1
