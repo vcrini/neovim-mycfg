@@ -22,8 +22,6 @@ opt.cursorline = true -- highlight the current cursor line
 
 -- appearance
 
--- turn on termguicolors for nightfly colorscheme to work
--- (have to use iterm2 or any other true color terminal)
 opt.termguicolors = true
 opt.background = "dark" -- colorschemes that can be light or dark will be made dark
 opt.signcolumn = "yes" -- show sign column so that text doesn't shift
@@ -55,3 +53,7 @@ vim.g.python3_host_prog = "/usr/local/bin/python3.9"
 -- opt.wildmode = "longest,list"
 opt.wildmode = "longest,list,full"
 vim.g.tmux_navigator_disable_when_zoomed = 1
+vim.api.nvim_cmd({
+  cmd = "colorscheme",
+  args = { "retrobox" },
+}, {})
