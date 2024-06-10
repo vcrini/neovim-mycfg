@@ -1,5 +1,15 @@
 return {
   "epwalsh/obsidian.nvim",
+  keys = {
+    { "<leader>otd", "<cmd>ObsidianToday<cr>", desc = "[O]bsidian [t]o[d]ay" },
+    { "<leader>oo", "<cmd>ObsidianOpen<cr>", desc = "[O]bsidian [O]pen" },
+    { "<leader>os", "<cmd>ObsidianSearch<cr>", desc = "[O]bsidian [S]earch" },
+    { "<leader>ob", ":ObsidianBacklinks<CR>", "[O]bsidian [B]acklinks" },
+    { "<leader>otm", ":ObsidianTomorrow<CR>", "[O]bsidian [T]o[m]orrow" },
+    { "<leader>oyd", ":ObsidianYesterday<CR>", "[O]bsidian [y]ester[d]ay" },
+    { "<leader>ota", ":ObsidianTags<CR>", "[O]bsidian [Ta]gs" },
+    { "<leader>on", ":ObsidianNew<CR>", "[O]bsidian [N]ew" },
+  },
   version = "*", -- recommended, use latest release instead of latest commit
   lazy = false,
   ft = "markdown",
