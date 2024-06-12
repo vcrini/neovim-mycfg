@@ -59,7 +59,9 @@ return {
       -- Mutually exclusive with 'prepend_note_id' and 'prepend_note_path'.
       use_path_only = false,
     },
-
+    daily_notes = {
+      folder = "dailynotes",
+    },
     -- Optional, configure key mappings. These are the defaults. If you don't want to set any keymappings this
     -- way then set 'mappings = {}'.
     mappings = {
